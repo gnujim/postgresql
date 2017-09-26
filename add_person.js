@@ -15,5 +15,6 @@ knex('famous_people').where('first_name', input).asCallback((err, result) => {
   if (err) {
     return console.error(err);
   }
-  console.log(result);
+  console.log(result[0]);
+  knex.destroy();
 });
